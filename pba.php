@@ -18,3 +18,5 @@ if ($conn) {
 else {
     echo "Connection failed.";
 }
+echo "...final";
+?>
