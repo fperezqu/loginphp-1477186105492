@@ -9,6 +9,8 @@ $tbl_name="MEMBERS"; // Table name
 $myusername=$_POST['myusername'];
 $mypassword=$_POST['mypassword'];
 
+echo "1<br>";
+
 // Connect to BLUDB
 $conn = db2_connect($conn_string, '', '');
 if ($conn) {
@@ -20,7 +22,7 @@ if ($conn) {
     $result = db2_execute($stmt);
 
 //$result=db2_query($sql);
-
+echo "2<br>";
 ?>
 
 <?php
@@ -41,11 +43,12 @@ header("location:login_success.php");
 else {
 echo "Wrong Username or Password";
 }
-
+echo "3<br>";
 ?>
 
 
 <?php
     db2_close($conn);
 }
+echo "4<br>";
 ?>
