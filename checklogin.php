@@ -23,32 +23,27 @@ if ($conn) {
 
 //$result=db2_query($sql);
 echo "2<br>";
-?>
 
-<?php
 
 // DB2_num_row is counting table row
 $count=db2_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 
-if($count==1){
-
-// Register $myusername, $mypassword and redirect to file "login_success.php"
-
-session_register("myusername");
-session_register("mypassword");
-header("location:login_success.php");
-}
-else {
-echo "Wrong Username or Password";
-}
+    if($count==1){
+    session_register("myusername");
+    session_register("mypassword");
+    header("location:login_success.php");
+    }
+    else {
+    echo "Wrong Username or Password";
+    }
 echo "3<br>";
-?>
 
-
-<?php
     db2_close($conn);
+}else{
+    echo "sin conexion";
 }
+    
 echo "4<br>";
 ?>
