@@ -3,8 +3,6 @@
 require('ConexionDB.php');
 $tbl_name="MEMBERS";
 
-$myusername=$_POST['myusername'];
-$mypassword=$_POST['mypassword'];
 echo "1<br>";
 
 $conn = db2_connect($conn_string, '', '');
